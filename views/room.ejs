@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
     <title>Zoom clone</title>
-    <script src="script.js">
-        
+    <script>
+        const ROOM_ID = "<%= roomId %>";
     </script>
 </head>
 <body>
-    ZOOM CLONE
+    <div id="video-grid">
+
+    </div>
+        <!-- js would parse html chronologically,that's why script.js is placed at end.
+            Otherwise it wouldn't recognise video-grid in script.js:1 -->
+    <script src="script.js">
+    </script>
 </body>
 </html>
